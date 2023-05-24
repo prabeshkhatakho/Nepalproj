@@ -1,0 +1,13 @@
+[
+   
+    {
+        "name":"Bhaktapur",  
+        "title":"Bhaktapur",
+        "questions":["tell me about bhaktapur"]
+    },
+    {
+        "name":"Kathmandu",  
+        "title":"Kathmandu",
+        "questions":["tell me about kathmandu"]
+    }
+]
