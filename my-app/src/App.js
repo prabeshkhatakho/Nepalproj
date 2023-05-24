@@ -6,6 +6,7 @@ import Navbar from './components/Navbar.js'
 import Kathmandu from './components/Kathmandu'
 import Bhaktapur from './components/Bhaktapur'
 import Home from './components/home'
+import Sidebar from './components/Sidebar'
 
 
 
@@ -17,6 +18,7 @@ function App() {
 
       <Router>
         <Navbar />
+        <Sidebar />
           <Routes>
             <Route path={"/"} element={<Home />}></Route> 
             
