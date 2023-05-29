@@ -2,25 +2,32 @@ import json
 import openai
 import os
 from pathlib import Path
+import requests
 
 api_key = os.environ.get('OPENAI_API_KEY')
 
+image_path = []
 
 
 file = open("my-app/src/components/config.json", "r")
 os.chdir("my-app/src/components")
 datas = json.load(file)
+   
 links = []
 
 for data in datas:
   
   title = data['title']
   questions = data['questions']
+  image_question_indexes = data["images"].keys()
+  images = data['images']
   answers = []
   
   body = ""
   name = data['name']
   links.append(f'<Link to=\'{name}\'>{name}</Link>')
+
+  print(image_question_indexes)
 
   for question in questions:
 
@@ -30,18 +37,45 @@ for data in datas:
     response = openai.Completion.create(
     engine="text-davinci-002",
     prompt=prompt,
-    max_tokens=50,
+    max_tokens=1000,
     n=1,
     stop=None,
     temperature=0.5,
     )
 
     message = response.choices[0].text.strip()
-    answers.append(message)
-
-  for question, answer  in zip(questions, answers):
     
-    body = body + "\n<h1>{}</h1>\n<p>{}</p>".format(question, answer)
+    if len(response.choices[0].text.strip()) >= 4096:
+    
+      message = message[:4096]
+
+    answers.append(message)
+    
+
+  for key, value in data["images"].items():
+    image_urls = value
+    print(image_urls)
+    if image_urls.startswith('http'):
+        response = requests.get(image_urls)
+        if response.status_code == 200:
+            filename = f"{key}.jpg"
+            save_path = "C:/prabeshkhatakho/Nepalprojs/my-app/src/components/images/" + filename
+            with open(save_path, "wb") as f:
+                f.write(response.content)
+                image_path.append({key: save_path})
+        else:
+            print(f"Failed to download image with key: {key}")
+    else:
+        print(f"Invalid URL for key: {key}")
+    
+
+  for index, (question, answer)  in enumerate(zip(questions, answers)):
+    
+    body += "\n<h1>{}</h1>\n<p>{}</p>".format(question, answer)
+    if index in image_question_indexes:
+      index == data(images[key])
+    body += f'\n<img src="{image_urls}" alt="Image">'
+
 
   file_path = f"{name}.js"
   

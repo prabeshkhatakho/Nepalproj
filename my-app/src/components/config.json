@@ -3,11 +3,14 @@
     {
         "name":"Bhaktapur",  
         "title":"Bhaktapur",
-        "questions":["tell me about bhaktapur"]
+        "images": {"0": "https://static.toiimg.com/photo/54311463/.jpg", "2": "https://th.bing.com/th/id/OIP.p74Vwnz3r2IF1c89f8b2MQHaEI?w=291&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"},
+        "questions":["Tell me about Bhaktapur","what are the 5 biggest newari festivals?", "best newari food"]
     },
     {
         "name":"Kathmandu",  
         "title":"Kathmandu",
-        "questions":["tell me about kathmandu"]
+        "images": {"0":"https://th.bing.com/th/id/R.836fdb7c5001dfa98ffce65506d28291?rik=htK8MUzoRkM9fA&pid=ImgRaw&r=0"},
+        "questions":["Tell me about Kathmandu."]
     }
 ]
+

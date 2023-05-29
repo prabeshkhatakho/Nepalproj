@@ -20,8 +20,6 @@ const Navbar=()=> {
                             <li>home</li></Link>
                         <Link to='/Services'>
                             <li>Services</li></Link>
-                        <Link to='/Resources'>
-                            <li>Resources</li></Link>
                         <Link to='/Contact'>
                             <li>Contact</li></Link>
                         <Link to='/Login'>

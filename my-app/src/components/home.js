@@ -7,7 +7,7 @@
       <div>
         
         <Link to='Bhaktapur'>Bhaktapur</Link>
-        <Link to='Kathmandu'>Kathmandu</Link>
+<Link to='Kathmandu'>Kathmandu</Link>
       </div>
     )
   }
