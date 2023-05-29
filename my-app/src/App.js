@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        
         <Sidebar />
         <Bhaktapur />
         <Kathmandu />
@@ -21,6 +21,9 @@ function App() {
             <Route path='/Bhaktapur' element ={<Bhaktapur />}></Route>
           </Routes>
       </Router>
+      <div>
+        <h1>Nepallllllll</h1>
+      </div>
     </>
   
   );

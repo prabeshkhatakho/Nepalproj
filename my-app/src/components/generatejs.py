@@ -68,13 +68,17 @@ for data in datas:
     else:
         print(f"Invalid URL for key: {key}")
     
-
+  
+     
   for index, (question, answer)  in enumerate(zip(questions, answers)):
     
     body += "\n<h1>{}</h1>\n<p>{}</p>".format(question, answer)
     if index in image_question_indexes:
-      index == data(images[key])
-    body += f'\n<img src="{image_urls}" alt="Image">'
+      
+      image_url = image_urls[index]  # Get the corresponding image URL
+      body += '\n<img src="{}" alt="Image">'.format(image_url)
+
+
 
 
   file_path = f"{name}.js"
@@ -86,10 +90,14 @@ for data in datas:
 
   js_code = '''
   import React from 'react'
+  import Navbar from './Navbar'
+  import Sidebar from './Sidebar'
 
   function {1}() {{
     return (
       <div>
+        <Navbar />
+        <Sidebar />
         {0}
       </div>
     )
@@ -105,44 +113,44 @@ for data in datas:
 
   #this is a break line
 
-home_path = f"home.js"
+  home_path = f"home.js"
 
-links_code = "\n" .join(links)
+  links_code = "\n" .join(links)
 
-  
-  
-if os.path.exists(home_path):
-  os.remove(home_path)
-  print(f"File '{home_path}' already exists and has been deleted.")
+    
+    
+  if os.path.exists(home_path):
+    os.remove(home_path)
+    print(f"File '{home_path}' already exists and has been deleted.")
 
-home_js_code = '''
-  import React from 'react'
-  import {{Link}} from 'react-router-dom'
+  home_js_code = '''
+    import React from 'react'
+    import {{Link}} from 'react-router-dom'
 
-  function Home() {{
-    return (
-      <div>
-        
-        {0}
-      </div>
-    )
-  }}
-  export default Home;
-  '''.format(links_code)
+    function Home() {{
+      return (
+        <div>
+          
+          {0}
+        </div>
+      )
+    }}
+    export default Home;
+    '''.format(links_code)
 
-file = Path(home_path)
-file.write_text(home_js_code, encoding='utf-8')
-print(f"File '{home_path}' has been created with the JavaScript code.")
+  file = Path(home_path)
+  file.write_text(home_js_code, encoding='utf-8')
+  print(f"File '{home_path}' has been created with the JavaScript code.")
 
-  
+    
 
-  
-  
- 
-
+    
+    
   
 
-  
- 
+    
 
-   
+    
+  
+
+    
