@@ -73,14 +73,14 @@ for data in datas:
   for index, (question, answer)  in enumerate(zip(questions, answers)):
     
     body += "\n<h1>{}</h1>\n<p>{}</p>".format(question, answer)
-    if index in image_question_indexes:
-      
-      image_url = image_urls[index]  # Get the corresponding image URL
-      body += '\n<img src="{}" alt="Image">'.format(image_url)
-
-
-
-
+    
+    
+    if str(index) in images:
+            image_url = images[str(index)]
+            body += '\n<img src="{0}" alt="Image">'.format(image_url)
+    else:
+        print("No image URL found for this question.")
+        
   file_path = f"{name}.js"
   
   
