@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import requests
 
-api_key = os.environ.get('OPENAI_API_KEY')
+api_key = os.environ["API_KEY"]
 
 image_path = []
 
@@ -14,6 +14,7 @@ os.chdir("my-app/src/components")
 datas = json.load(file)
    
 links = []
+route = []
 
 for data in datas:
   
@@ -26,6 +27,11 @@ for data in datas:
   body = ""
   name = data['name']
   links.append(f'<Link to=\'{name}\'>{name}</Link>')
+  
+  route.append(f'<Route path="/{name}" element={{< {name} />}} />')
+ 
+
+  
 
   print(image_question_indexes)
 
@@ -77,7 +83,7 @@ for data in datas:
     
     if str(index) in images:
             image_url = images[str(index)]
-            body += '\n<img src="{0}" alt="Image">'.format(image_url)
+            body += '\n<img src="{0}" alt="Image"/>'.format(image_url)
     else:
         print("No image URL found for this question.")
         
@@ -89,13 +95,14 @@ for data in datas:
       print(f"File '{file_path}' already exists and has been deleted.")
 
   js_code = '''
+  import './component.css';
   import React from 'react'
   import Navbar from './Navbar'
   import Sidebar from './Sidebar'
 
   function {1}() {{
     return (
-      <div>
+      <div className="location">
         <Navbar />
         <Sidebar />
         {0}
@@ -116,6 +123,7 @@ for data in datas:
   home_path = f"home.js"
 
   links_code = "\n" .join(links)
+  route_path = "\n" .join(route)
 
     
     
@@ -124,19 +132,31 @@ for data in datas:
     print(f"File '{home_path}' already exists and has been deleted.")
 
   home_js_code = '''
+    
     import React from 'react'
-    import {{Link}} from 'react-router-dom'
+    import Navbar from './Navbar';
+    import Sidebar from './Sidebar';
+    import Bhaktapur from './Bhaktapur'
+    import Kathmandu from './Kathmandu'
+    import VacuumCleaner from './VacuumCleaner'
+    import {{ BrowserRouter, Routes, Route, Link, Outlet }} from "react-router-dom";
+    import './component.css';
 
     function Home() {{
       return (
-        <div>
-          
-          {0}
-        </div>
+        <BrowserRouter>
+          <Routes>
+            {1}
+          </Routes>
+          <div>
+            
+            {0}
+          </div>
+        </BrowserRouter>
       )
     }}
     export default Home;
-    '''.format(links_code)
+    '''.format(links_code,route_path,)
 
   file = Path(home_path)
   file.write_text(home_js_code, encoding='utf-8')

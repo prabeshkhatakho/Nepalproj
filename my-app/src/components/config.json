@@ -11,6 +11,12 @@
         "title":"Kathmandu",
         "images": {"0":"https://th.bing.com/th/id/R.836fdb7c5001dfa98ffce65506d28291?rik=htK8MUzoRkM9fA&pid=ImgRaw&r=0"},
         "questions":["Tell me about Kathmandu."]
+    },
+    {
+        "name":"VacuumCleaner",  
+        "title":"top trending vacuum cleaners",
+        "images": {"0":"https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg"},
+        "questions":["Tell me about vacuum cleaner", "what are the 5 top trending vacuum cleaners"]
     }
 ]
 

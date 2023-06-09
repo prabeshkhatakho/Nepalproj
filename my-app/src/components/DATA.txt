@@ -1,0 +1,27 @@
+
+import React from 'react'
+
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
+import Bhaktapur from './Bhaktapur'
+import Kathmandu from './Kathmandu'
+import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+
+function Home() {
+  return (
+
+   
+    <BrowserRouter>
+        <Routes>
+            <Route  path="/bhaktapur" element = {<Bhaktapur />} />
+            <Route  path="/kathmandu" element = {<Kathmandu />} />
+        </Routes>
+        <div>       
+            <Link to='Bhaktapur'>Bhaktapur</Link>  
+            <Link to='Kathmandu'>Kathmandu</Link>
+        </div>
+    </BrowserRouter>
+    
+  )
+}
+export default Home;
