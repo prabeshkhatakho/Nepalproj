@@ -7,29 +7,23 @@ import GroupIcon from '@mui/icons-material/Group';
 
 export const SidebarData = [
     {
-        title:"Home",
-        icon: <HomeIcon />,
-        link:"https://www.youtube.com/watch?v=u1HyG535JY0",
+        title:"Bhaktapur"
     },
     {
-        title:"Mailbox",
-        icon: <EmailIcon />,
-        link:"/mailbox",
+        title:"Kathmandu",
+        
     },
     {
-        title:"Analytics",
-        icon: <AssessmentIcon />,
-        link:"/analytics",
+        title:"Vacuum cleaner",
+        
     },
     {
-        title:"Dashboard",
-        icon: <AnalyticsIcon />,
-        link:"/dashboard",
+        title:"Air purifier",
+       
     },
     {
-        title:"Friends",
-        icon: <GroupIcon />,
-        link:"/friends",
+        title:"Board games",
+        
     },
 
 ];

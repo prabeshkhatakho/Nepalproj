@@ -17,6 +17,18 @@
         "title":"top trending vacuum cleaners",
         "images": {"0":"https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg"},
         "questions":["Tell me about vacuum cleaner", "what are the 5 top trending vacuum cleaners"]
+    },
+    {
+        "name":"TrendingAirPurifier",  
+        "title":"TrendingAirPurifier",
+        "images": {"0":"https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg"},
+        "questions":["tell me about trending air purifier"]
+    },
+    {
+        "name":"TrendingBoardGames",  
+        "title":"TrendingBoardGames",
+        "images": {"0":"https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg"},
+        "questions":["tell me about trending board games"]
     }
 ]
 

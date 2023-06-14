@@ -12,6 +12,9 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 
 .location h1 {
@@ -29,11 +32,4 @@
   margin-top: 20px;
   margin-bottom: 20px;
   max-height: 300px; /* Set the desired maximum height for the image */
-}
-
-@media only screen and (min-width: 768px) {
-  .location {
-    max-width: 800px;
-    margin: 0 auto;
-  }
 }

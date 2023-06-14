@@ -15,6 +15,8 @@ datas = json.load(file)
    
 links = []
 route = []
+all_page_name = []
+
 
 for data in datas:
   
@@ -29,11 +31,9 @@ for data in datas:
   links.append(f'<Link to=\'{name}\'>{name}</Link>')
   
   route.append(f'<Route path="/{name}" element={{< {name} />}} />')
- 
+  all_page_name.append(f"import {name} from './{name}'")
 
   
-
-  print(image_question_indexes)
 
   for question in questions:
 
@@ -124,6 +124,8 @@ for data in datas:
 
   links_code = "\n" .join(links)
   route_path = "\n" .join(route)
+  page_names = "\n" .join(all_page_name)
+
 
     
     
@@ -131,14 +133,17 @@ for data in datas:
     os.remove(home_path)
     print(f"File '{home_path}' already exists and has been deleted.")
 
+  print(links_code)
+  print(all_page_name)
+
   home_js_code = '''
     
     import React from 'react'
     import Navbar from './Navbar';
     import Sidebar from './Sidebar';
-    import Bhaktapur from './Bhaktapur'
-    import Kathmandu from './Kathmandu'
-    import VacuumCleaner from './VacuumCleaner'
+    
+    {2};
+    
     import {{ BrowserRouter, Routes, Route, Link, Outlet }} from "react-router-dom";
     import './component.css';
 
@@ -146,7 +151,10 @@ for data in datas:
       return (
         <BrowserRouter>
           <Routes>
-            {1}
+            
+              {1}
+            
+            
           </Routes>
           <div>
             
@@ -156,7 +164,7 @@ for data in datas:
       )
     }}
     export default Home;
-    '''.format(links_code,route_path,)
+    '''.format(links_code,route_path,page_names)
 
   file = Path(home_path)
   file.write_text(home_js_code, encoding='utf-8')

@@ -1,32 +1,38 @@
 /* Sidebar.css */
 
-.Sidebar {
+.Left-Sidebar {
     width: 300px;
-    background-color: #96989d;
+    
     margin: 0;
     padding: 0px;
     position: fixed;
     top: 60px; /* Adjust this value to match the height of your navbar */
     left: 0;
     bottom: 0;
-    color: #fff;
+    
     overflow-y: auto; /* Add scrollbar if content exceeds height */
+    
   }
   
-  .Sidebar ul {
+  .Left-Sidebar ul {
     list-style-type: none;
     padding: 0;
     margin-top: 20px; /* Add some margin to create space for the text */
   }
   
-  .Sidebar li {
-    display: flex;
+  .Left-Sidebar li {
+    display: block;
     align-items: center;
     margin-bottom: 10px;
     cursor: pointer;
+    color: black;
+    text-align: center;
+   
+    
+    
   }
   
-  .Sidebar li:hover {
+  .Lefft-Sidebar li:hover {
     background-color: #2f477a;
   }
   
@@ -34,19 +40,58 @@
     margin-right: 10px;
   }
   
-  .Sidebar li div {
+  .Left-Sidebar li div {
     font-size: 18px;
+    
   }
   
-  .Sidebar li span {
+  .Left-Sidebar li span {
     margin-left: 5px;
   }
   
-  .Sidebar li svg {
+  .Left-Sidebar li svg {
     fill: #fff;
   }
   
-  .Sidebar li:hover svg {
+  .Left-Sidebar li:hover svg {
     fill: #dfe3ee;
   }
+
+  .Right-Sidebar {
+    width: 300px;
+    
+    margin: 0;
+    padding: 0px;
+    position: fixed;
+    top: 60px; /* Adjust this value to match the height of your navbar */
+    right: 0;
+    bottom: 0;
+    
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+    
+  }
+
+  .Right-Sidebar ol {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    padding: 2px;
+  }
+
+
+  @media (max-width:768px) {
   
+    .Left-Sidebar{
+      display: none;
+  
+    }
+    .Right-Sidebar{
+      display: none;
+    }
+  }
+
+  
+ 
