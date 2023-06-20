@@ -102,10 +102,12 @@ for data in datas:
 
   function {1}() {{
     return (
-      <div className="location">
+      <div className="locations">
         <Navbar />
         <Sidebar />
+        <div className="location">
         {0}
+        </div>
       </div>
     )
   }}

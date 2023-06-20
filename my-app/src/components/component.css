@@ -33,3 +33,17 @@
   margin-bottom: 20px;
   max-height: 300px; /* Set the desired maximum height for the image */
 }
+
+
+@media (max-width:768px) {
+  .location{
+    display: block;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+}

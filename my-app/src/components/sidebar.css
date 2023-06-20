@@ -61,7 +61,7 @@
     width: 300px;
     
     margin: 0;
-    padding: 0px;
+    padding-top: 10px;
     position: fixed;
     top: 60px; /* Adjust this value to match the height of your navbar */
     right: 0;

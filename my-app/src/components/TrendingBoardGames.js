@@ -6,13 +6,15 @@
 
   function TrendingBoardGames() {
     return (
-      <div className="location">
+      <div className="locations">
         <Navbar />
         <Sidebar />
+        <div className="location">
         
 <h1>tell me about trending board games</h1>
-<p>Some of the most popular and trending board games include Monopoly, Scrabble, Clue, and Sorry. These classic games have been around for decades and continue to be enjoyed by people of all ages. Other popular board games include Settlers of Catan, Ticket to Ride, and Carcassonne. These games are all considered to be modern classics and are enjoyed by many people.</p>
+<p>Some popular board games that are trending right now are Betrayal at Baldur’s Gate, Boss Monster, and Codenames. These games are all popular because they are easy to learn and play, and they are also great for groups.</p>
 <img src="https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg" alt="Image"/>
+        </div>
       </div>
     )
   }
