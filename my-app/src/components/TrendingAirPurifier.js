@@ -12,7 +12,7 @@
         <div className="location">
         
 <h1>tell me about trending air purifier</h1>
-<p>One of the most popular air purifiers on the market is the Blueair Classic 605. This unit is designed to remove up to 99.97 percent of airborne particles, making it an ideal choice for those with allergies or asthma. The Classic 605 features a three-stage filtration system that includes a pre-filter, an activated carbon filter, and a HEPA filter. The unit also features a built-in fan that can circulate up to 535 cubic feet of air per minute.</p>
+<p>One of the most popular air purifiers on the market is the Blueair Classic 605. It is designed to remove 99.97% of airborne particles, including pollen, dust, smoke, and pet dander. The unit also features a filter life indicator to let you know when it's time to replace the filter.</p>
 <img src="https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg" alt="Image"/>
         </div>
       </div>
