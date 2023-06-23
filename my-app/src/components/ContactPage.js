@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./contactpage.css"
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -15,10 +16,10 @@ const ContactPage = () => {
   };
 
   return (
-    <div>
+    <div className='contactpage'>
       <h1>Contact Page</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='name'>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -27,7 +28,7 @@ const ContactPage = () => {
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div>
+        <div className='email'>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -36,7 +37,7 @@ const ContactPage = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div>
+        <div className='message'>
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"

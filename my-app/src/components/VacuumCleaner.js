@@ -12,16 +12,14 @@
         <div className="location">
         
 <h1>Tell me about vacuum cleaner</h1>
-<p>A vacuum cleaner is a device that uses an air pump to create a partial vacuum to suck up dust and dirt from floors and other surfaces.</p>
+<p>A vacuum cleaner is a device that uses an air pump to create a vacuum, which in turn cleans dust and dirt from surfaces and upholstery.</p>
 <img src="https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg" alt="Image"/>
 <h1>what are the 5 top trending vacuum cleaners</h1>
-<p>The 5 top trending vacuum cleaners are:
-
-1. Dyson V11 Absolute
-2. Shark Navigator Lift-Away
-3. iRobot Roomba 690
-4. Bissell CrossWave
-5. Eufy BoostIQ RoboVac</p>
+<p>1. Dyson Ball Multi Floor 2 Upright Vacuum Cleaner
+2. Shark Navigator Lift-Away Professional Upright Vacuum
+3. Hoover WindTunnel T-Series Rewind Plus Bagless Upright Vacuum
+4. Bissell CleanView Deluxe Corded Handheld Vacuum
+5. Eureka NEU182A PowerSpeed Lightweight Bagless Upright Vacuum</p>
         </div>
       </div>
     )

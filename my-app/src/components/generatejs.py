@@ -60,7 +60,7 @@ for data in datas:
 
   for key, value in data["images"].items():
     image_urls = value
-    print(image_urls)
+    
     if image_urls.startswith('http'):
         response = requests.get(image_urls)
         if response.status_code == 200:
@@ -127,7 +127,7 @@ for data in datas:
   links_code = "\n" .join(links)
   route_path = "\n" .join(route)
   page_names = "\n" .join(all_page_name)
-
+  print(links_code)
 
     
     
