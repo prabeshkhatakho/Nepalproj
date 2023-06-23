@@ -24,6 +24,7 @@ const ContactPage = () => {
           <input
             type="text"
             id="name"
+            placeholder='xyz'
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -33,6 +34,7 @@ const ContactPage = () => {
           <input
             type="email"
             id="email"
+            placeholder='admin@admin.com'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

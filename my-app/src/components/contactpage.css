@@ -1,24 +1,45 @@
 .contactpage {
-    display: block;
-    text-align: center;
-    
-    
+  width: 400px;
+  margin: 0 auto;
 }
 
-.contactpage button{
-    background-color: #201e1e;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+h1 {
+  text-align: center;
 }
 
-.contactpage button:hover {
-    background-color: #6507e9;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+}
 
-  .contactpage h1 {
-    padding-top: 0px;
-  }
+.name,
+.email,
+.message {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
