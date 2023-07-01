@@ -2,7 +2,7 @@
     
     import React from 'react'
     import Navbar from './Navbar';
-    import Sidebar from './Sidebar';
+    import SideBar from './SideBar';
     
     import Bhaktapur from './Bhaktapur'
 import Kathmandu from './Kathmandu'
