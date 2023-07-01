@@ -145,7 +145,8 @@ for data in datas:
     import Sidebar from './Sidebar';
     
     {2};
-    
+
+    import ContactPage from './ContactPage';
     import {{ BrowserRouter, Routes, Route, Link, Outlet }} from "react-router-dom";
     import './component.css';
 
@@ -153,15 +154,22 @@ for data in datas:
       return (
         <BrowserRouter>
           <Routes>
-            
+            <Route path="/ContactPage" element={{<ContactPage />}} />
               {1}
-            
-            
-          </Routes>
-          <div>
-            
-            {0}
-          </div>
+             
+  
+              <Route 
+                path = "/"
+                element = {{
+                <>
+                  <div>
+                    {0}
+                  </div>
+                </>
+                }}
+                />
+              </Routes>
+              
         </BrowserRouter>
       )
     }}

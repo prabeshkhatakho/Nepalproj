@@ -12,7 +12,7 @@
         <div className="location">
         
 <h1>tell me about trending board games</h1>
-<p>Some of the most popular board games right now are Monopoly, Scrabble, and Clue. Other popular games include Settlers of Catan, Ticket to Ride, and Carcassonne.</p>
+<p>Some popular board games that are trending right now are Monopoly, Scrabble, and Risk. These games are all classics that have been around for many years, but they continue to be popular among gamers of all ages. Monopoly is a board game in which players attempt to amass wealth by buying and selling property, while Scrabble is a board game in which players score points by creating words from a set of letter tiles. Risk is a board game in which players attempt to conquer the world by gaining control of territory.</p>
 <img src="https://m.media-amazon.com/images/I/61Gd8fvPqqL._AC_SL1500_.jpg" alt="Image"/>
         </div>
       </div>
